@@ -58,16 +58,16 @@
     ansible.builtin.apt: update_cache=yes
     become: yes
   - name: Ensure Apache is installed
-    ansible.builtin.apt: name=apache2=2.4.29* state=present
+    ansible.builtin.apt: name=apache2 #=2.4.29* state=present
     become: yes
   - name: Ensure PHP is installed
-    ansible.builtin.apt: name=php7.2=7.2.24* state=present
+    ansible.builtin.apt: name=php7.2 #=7.2.24* state=present
     become: yes
   - name: Ensure PHP Module for Apache is installed
-    ansible.builtin.apt: name=libapache2-mod-php7.2=7.2.24* state=present
+    ansible.builtin.apt: name=libapache2-mod-php7.2 #=7.2.24* state=present
     become: yes
   - name: Ensure MySql Module for Apache is installed
-    ansible.builtin.apt: name=php7.2-mysql=7.2.24* state=present
+    ansible.builtin.apt: name=php7.2-mysql #=7.2.24* state=present
     become: yes
 
 - name: Deploy the application-package
