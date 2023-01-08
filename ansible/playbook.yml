@@ -45,7 +45,7 @@
   tasks:
   - name: Ensure Apt is up to date
     ansible.builtin.apt: update_cache=yes
-    become: yes
+    #become: yes
   - name: Ensure Apache is installed
     ansible.builtin.apt: name=apache2=2.4.29* state=present
     become: yes
