@@ -1,4 +1,4 @@
-name: Lamp Deployment
+name: Lamp Deployment for Testing@1
 
 on:
   push:
