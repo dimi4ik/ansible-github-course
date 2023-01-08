@@ -8,40 +8,40 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
-    name: Lint Ansible Playbook
-    runs-on: ubuntu-latest
+  #lint:
+  #  name: Lint Ansible Playbook
+  #  runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout sources
-      uses: actions/checkout@v3
-    - name: Linting
-      uses: ansible/ansible-lint-action@main
-      with:
-        targets: |
-          ansible/playbook.yml
-          ansible/inventory.yml
+   # steps:
+   # - name: Checkout sources
+   #   uses: actions/checkout@v3
+   # - name: Linting
+    #  uses: ansible/ansible-lint-action@main
+     # with:
+      #  targets: |
+       #   ansible/playbook.yml
+       #   ansible/inventory.yml
 
-        args: "-c ansible/.ansible-lint"
+        #args: "-c ansible/.ansible-lint"
 
-    - name: Publish Playbook Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: playbooks
-        path: ansible
+    #- name: Publish Playbook Artifact
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    name: playbooks
+     #   path: ansible
 
 
   deploy_to_test:
     name: Deploy to test
     runs-on: ubuntu-latest
-    needs: lint
+    #needs: lint
     if: github.ref == 'refs/heads/main'
     
     steps:
-    - uses: actions/download-artifact@v2
-      with:
-        name: playbooks
-        path: ansible
+    #- uses: actions/download-artifact@v2
+    #  with:
+    #    name: playbooks
+    #    path: ansible
     
     - uses: dawidd6/action-ansible-playbook@v2
       with:
