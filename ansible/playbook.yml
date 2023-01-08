@@ -61,7 +61,7 @@
 - name: Deploy the application-package
   hosts: web-servers
   tasks:
-  - name: Install PHP File
+  - name: sInstall PHP File
     ansible.builtin.copy:
       src: files/index.php
       dest: /var/www/html/index.php
