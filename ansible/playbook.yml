@@ -43,6 +43,14 @@
   hosts: web-servers
   gather_facts: no
   tasks:
+  - name: pingggggg
+    ansible.builtin.ping:
+
+  - name: Debug
+    debug:
+     msg: ansible_user
+
+
   - name: Ensure Apt is up to date
     ansible.builtin.apt: update_cache=yes
     #become: yes
