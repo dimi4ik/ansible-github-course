@@ -41,6 +41,7 @@
 
 - name: Ensure Apache is installed with the correct modules
   hosts: web-servers
+  gather_facts: no
   tasks:
   - name: Ensure Apt is up to date
     ansible.builtin.apt: update_cache=yes
