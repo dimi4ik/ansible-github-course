@@ -62,7 +62,6 @@
   hosts: web-servers
   tasks:
   - name: Install PHP File
-  nonsense
     ansible.builtin.copy:
       src: files/index.php
       dest: /var/www/html/index.php
