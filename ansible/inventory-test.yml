@@ -3,7 +3,7 @@ all:
   children:
     web-servers:
       hosts:
-        20.208.42.79
+        20.203.249.119
       vars:
         ansible_user: azureuser
         ansible_ssh_pass: '{{ test_ssh_password }}'
