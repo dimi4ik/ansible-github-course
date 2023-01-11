@@ -49,6 +49,25 @@
   - name: pingggggg
     ansible.builtin.ping:
 
+- name: ping windwos Server
+  hosts: 10.10.1.6
+  gather_facts: no
+  connection: local
+  ignore_errors: true
+  ansible_connection:                   "winrm"
+  ansible_port:                          5986
+  ansible_winrm_scheme:                 "https"
+  ansible_winrm_server_cert_validation: "ignore"
+  ansible_winrm_transport:              "credssp"
+  ansible_user:                          m000\azureuser
+
+
+  tasks:
+  - name: pinnnnngggggg****
+    ansible.builtin.win_ping:
+
+
+
 #To uncomment already commented out block (multiline): Select the whole block section > Ctrl K U
 
 
