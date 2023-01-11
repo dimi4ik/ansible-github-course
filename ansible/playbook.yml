@@ -46,7 +46,7 @@
   ignore_errors: true
 
   tasks:
-  - name: pingggggg
+  - name: pingggggg Llinux
     ansible.builtin.ping:
 
   - name: ping windwos Server
@@ -62,7 +62,7 @@
     ansible_user:                          m000\azureuser
 
   tasks:
-  - name: pinnnnngggggg****
+  - name: pinnnnngggggg**** Server
     ansible.builtin.win_ping:
 
 
