@@ -42,7 +42,7 @@
 - name: Ensure Apache is installed with the correct modules
   hosts: web-servers
   gather_facts: no
-  connection: local
+  #connection: local
   ignore_errors: true
 
   tasks:
