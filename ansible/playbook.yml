@@ -52,7 +52,7 @@
   - name: ping windwos Server
     hosts: 10.10.1.6
     gather_facts: no
-    connection: local
+    #connection: local
     ignore_errors: true
     ansible_connection:                   "winrm"
     ansible_port:                          5986
