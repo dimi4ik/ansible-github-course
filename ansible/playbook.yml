@@ -62,10 +62,12 @@
     ansible_user:                          m000\azureuser
 
   tasks:
-  - name: pinnnnn windoes Server
+  - name: builtin.setup
     #ansible.builtin.win_ping:
     ansible.builtin.setup:
 
+  - name: pinnnnn windoes Server
+    ansible.builtin.win_ping:
 
 
 #To uncomment already commented out block (multiline): Select the whole block section > Ctrl K U
