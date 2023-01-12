@@ -64,7 +64,7 @@
   tasks:
   - name: pinnnnn windoes Server
     #ansible.builtin.win_ping:
-    ansible.builtin.setup
+    ansible.builtin.setup:
 
 
 
